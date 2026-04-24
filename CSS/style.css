@@ -1,0 +1,432 @@
+/* ===== BASE RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: white;
+  padding: 1.125rem 0;
+  border-bottom: 0.0625rem solid #eee;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 68.75rem;
+  margin: auto;
+  padding: 0 1.25rem;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+  color: #000000;
+}
+
+.logo span {
+  font-size: 25px;
+  color: #000000;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.menu a {
+  margin-left: 1.75rem;
+  text-decoration: none;
+  color: #555;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  color: #2563eb;
+}
+
+/* ===== 햄버거 버튼 ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #222;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* 햄버거 → X 변환 */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== HERO ===== */
+.Hero {
+  padding-top: 8.75rem;
+  padding-bottom: 6.25rem;
+  text-align: center;
+}
+
+.Hero-inner {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background: #e7efff;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 62.4375rem;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.Hero h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+.Hero p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.875rem;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 1.875rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.625rem;
+  color: black;
+  font-size: 16px;
+}
+
+.primary {
+  background: black;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  border: 0.0625rem solid #ddd;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  padding: 5rem 0;
+  font-weight: bold;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  font-weight: 500;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 1.25rem;
+}
+
+.card-box {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  font-weight: 900;
+}
+
+.card {
+  background: #edf0e5;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* ===== PORTFOLIO ===== */
+.portfolio {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.portfolio-card {
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.portfolio a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-card img {
+  width: 100%;
+}
+
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-content h3 {
+  font-size: large;
+}
+
+.card-content p {
+  font-size: medium;
+}
+
+.portfolio h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* ===== AI ===== */
+.ai {
+  background: #111;
+  color: white;
+  padding: 3.75rem 0;
+}
+
+.ai-card {
+  background: #222;
+  padding: 1.25rem;
+  border-radius: 0.9375rem;
+  text-align: center;
+}
+
+.container h2 {
+  text-align: center;
+  padding-bottom: 1.875rem;
+  font-size: large;
+  font-weight: 800;
+}
+
+.ai-card a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: large;
+}
+
+.ai-card p {
+  font-size: medium;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 80px 0;
+}
+
+.contact-aline-center {
+  text-align: center;
+}
+
+/* ===================================================
+   반응형 미디어 쿼리
+=================================================== */
+
+/* 태블릿 (768px ~ 1024px) */
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .menu a {
+    font-size: 16px;
+    margin-left: 1.25rem;
+  }
+
+  .Hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  /* 햄버거 버튼 표시 */
+  .hamburger {
+    display: flex;
+  }
+
+  /* 모바일 메뉴 */
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #eee;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 0;
+    padding: 0.75rem 0;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+  }
+
+  .menu a:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero */
+  .Hero {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .Hero h1 {
+    font-size: 2rem;
+    word-break: keep-all;
+  }
+
+  .Hero p {
+    font-size: 0.9rem;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    max-width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .card-box {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Portfolio */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* AI */
+  .ai .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ai-card {
+    padding: 1rem;
+  }
+}
+
+/* 소형 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .Hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .ai .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-card a h3 {
+    font-size: 1rem;
+  }
+
+  .contact {
+    padding: 60px 0;
+  }
+
+  .about img {
+    height: 220px;
+  }
+}
